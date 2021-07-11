@@ -1,0 +1,16 @@
+<!-- Nav Bar  to navigate to home: Admin -->
+<nav class="navbar navbar-expand-sm " fixed-top >
+    <ul class="navbar-nav" >
+      <a class="nav-link navBrand" routerLink="/client">
+        <i class="fab fa-asymmetrik"></i>
+        AEc
+      </a>       
+    </ul>
+  </nav>
+
+  <h1>Delete Engineer</h1>
+  <!-- <label class="space" for="engineerId">Enter Engineer Id:</label>
+  <input type="text" name="engineerId" [(ngModel)]="engineerId"> -->
+  <button class=" btn btn-sm btn-danger" (click)="deleteEngineer()">Yes </button>
+    <button class=" btn btn-sm btn-warning" (click)="dontDeleteEngineer()">No!</button>
+  <h1>{{message}}</h1>

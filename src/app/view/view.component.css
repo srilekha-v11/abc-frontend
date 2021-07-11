@@ -1,0 +1,42 @@
+.nav-link:hover {
+  color: white;
+}
+.navBrand {
+  font-weight: 800;
+  padding: 10px 20px;
+  font-size: 30px;
+}
+
+img {
+  width: 100%;
+  height: 50%;
+}
+
+element.style {
+  width: 110.045px;
+  margin: 0px;
+  padding: 0px;
+  font-size: 11.3448px;
+  line-height: 13.8974px;
+  top: 61.2845px;
+  left: 186.913px;
+}
+.blank {
+  padding: 30px;
+}
+.bg {
+  /* background-color:  */
+  text-align: center;
+  padding: 0 40px;
+  margin: 0 60px;
+}
+
+h1{ 
+    font-weight: 800;
+}
+.plane{
+    font-family:'Open Sans', sans-serif;;
+}
+.padding{
+    padding: 20px 0;
+}

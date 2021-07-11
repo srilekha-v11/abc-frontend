@@ -1,0 +1,40 @@
+<nav
+  class="navbar navbar-expand-sm"
+  fixed-top
+>
+  <ul class="navbar-nav">
+
+    <a class="nav-link navBrand" >
+        <i class="fab fa-asymmetrik"></i> 
+        AEc
+      </a>
+
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/engineer/logged/{{id}}">Home</a>
+      </li>
+
+    <li class="nav-item">
+      <a
+        class="nav-link"
+        routerLink="/engineer/engComplaints/engOpenComplaints/{{ id }}"
+        >Open Complaints</a
+      >
+    </li>
+
+    <li class="nav-item">
+      <a
+        class="nav-link"
+        routerLink="/engineer/engComplaints/engCloseComplaints/{{ id }}"
+        >Closed Complaints</a
+      >
+    </li>
+
+    <li class="nav-item">
+      <a
+        class="nav-link"
+        routerLink="/engineer/engComplaints/allComplaints/{{ id }}"
+        >All Complaints</a
+      >
+    </li>
+  </ul>
+</nav>

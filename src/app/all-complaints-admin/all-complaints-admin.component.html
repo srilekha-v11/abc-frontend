@@ -1,0 +1,37 @@
+<!-- Nav bar to route back home -->
+<nav class="navbar navbar-expand-sm " fixed-top>
+    <ul class="navbar-nav">
+
+        <a class="nav-link navBrand" routerLink="/client">
+            <i class="fab fa-asymmetrik"></i> 
+            AEc
+          </a>
+          
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/admin">back</a>
+          </li>
+
+    </ul>
+</nav>
+
+<h2>Complaints</h2>
+<table class="table table-stiped">
+    <thead>
+        <tr>
+            <th>Complaint Id</th>
+            <th>Model Number</th>
+            <th>Complaint Name</th>
+            <th>Status</th>
+            <th>Registered Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let complaint of complaints ">
+            <td>{{complaint.complaintId}}</td>
+            <td>{{complaint.productModelNumber}}</td>
+            <td>{{complaint.complaintName}}</td>
+            <td>{{complaint.status}}</td>
+            <td>{{complaint.complaintDate | date}}</td>
+        </tr>
+    </tbody>
+</table>

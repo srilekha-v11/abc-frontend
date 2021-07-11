@@ -1,0 +1,28 @@
+<nav
+  class="navbar navbar-expand-sm"
+  fixed-top
+>
+  <ul class="navbar-nav">
+    <a class="nav-link navBrand" >
+        <i class="fab fa-asymmetrik"></i> 
+        AEc
+      </a>
+
+  </ul>
+</nav>
+
+<div>
+     
+    <div [style.display]="product.productId ? 'block': 'none'">
+        <h1 >Details of Product with id {{product.productId}}</h1>
+     
+        <h3 >Name: {{product.productName}}</h3>
+        <h3 >Model Number: {{product.modelNumber}}</h3>
+        <h3> Category Name: {{product.productCategoryName}}</h3>
+        
+        <h3 >Warranty Date: {{product.warrantyYears}}</h3>
+        <h3 >Date of Purchase: {{product.dateofPurchase | date}}</h3>
+        
+        <!-- <h3 >Date Of Purchase: {{product.dop}}</h3> -->
+        </div>
+    </div>

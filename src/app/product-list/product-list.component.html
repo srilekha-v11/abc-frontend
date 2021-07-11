@@ -1,0 +1,51 @@
+<nav class="navbar navbar-expand-sm " fixed-top >
+    <ul class="navbar-nav" >
+
+            <li class="nav-item">
+                <h1 hidden>{{client.clientId}}</h1>
+                <a class="nav-link" [routerLink]="['/client/product/addProduct',clientId]">Add a Product</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/client/logged/{{client.clientId}}">back</a>
+              </li>
+              
+        
+    </ul>
+  </nav>
+
+<h2>Product List</h2>
+<table class="table  table-borderless">
+    <thead>
+        <tr>
+            <th>Client Id</th>
+            <th>Model Number</th>
+            <th>Product Name</th>
+            <th>Warranty Years</th>
+            <th>Date of Purchase</th>
+            <th>View / Update / Delete / Add Complaint</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of productResponse">
+            <td>{{product.clientId}}</td>
+            <td hidden>{{product.productId}}</td>
+            <td>{{product.modelNumber}}</td>
+            <td>{{product.productName}}</td>
+            <td>{{product.warrantyYears}}</td>
+            <td>{{product.dateofPurchase | date}}</td>
+            <td>
+                <h1 hidden >{{product.productId}}</h1>
+                <h1 hidden >{{product.modelNumber}}</h1>
+                <h1 hidden>{{client.clientId}}</h1>
+                <button type="button" class="btn btn-outline-warning btn-sm" (click)="viewProduct(product.productId)" routerLink = "/client/product/viewProduct">View Product</button>&nbsp;
+                <button type="button" class="btn btn-outline-info btn-sm" (click)="UpdateProduct(product.productId,client.clientId)"  routerLink = "/client/product/UpdateProduct/:productId">Update Product</button> &nbsp;
+                <button type="button" class="btn btn-outline-danger btn-sm" (click)="deleteProduct(product.productId,client.clientId)" routerLink = "/client/product/deleteProduct">Delete Product</button>&nbsp;
+                <button type="button" class="btn btn-outline-primary btn-sm" (click)="bookComplaint(product.productId,client.clientId,product.modelNumber)" >Add Complaint</button>
+                <!-- routerLink = "/client/product/bookComplaint/" -->
+                
+            </td>
+        </tr>
+    </tbody>
+</table>

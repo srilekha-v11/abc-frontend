@@ -1,0 +1,38 @@
+<nav
+  class="navbar navbar-expand-sm"
+  fixed-top
+>
+<a class=" nav-link navBrand" >
+  <i class="fab fa-asymmetrik"></i> 
+  AEc
+</a>
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/">Home</a>
+    </li>
+  </ul>
+</nav>
+
+<h2>Login Here!!</h2>
+<div class="container">
+    <div class=row>
+        <div class="col col-lg">
+            <div class="forms">
+                <form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm.value)">
+                    <div class="form-group">
+                        <label>Mobile Number</label>
+                        <input type="text" #email class="form-control" id="phoneNumber" ngModel name="phoneNumber" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" #password class="form-control" id="password" ngModel name="password" required>
+                    </div>
+                    <button [disabled]="loginForm.invalid" class="btn btn-success" type="submit">Login</button>
+                    <!-- <button class="btn btn-success" type="submit" >Login</button> -->
+                </form>
+                <p> <a routerLink="/engineer/login/register">Register</a> </p> 
+                
+            </div>
+        </div>
+    </div>
+</div>

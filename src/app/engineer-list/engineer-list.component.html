@@ -1,0 +1,44 @@
+<nav
+  class="navbar navbar-expand-sm"
+  fixed-top
+>
+  <ul class="navbar-nav">
+    <a class="nav-link navBrand" href="#">
+      <i class="fab fa-asymmetrik"></i> 
+      AEc
+    </a>
+    
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/admin">back</a>
+    </li>
+  </ul>
+</nav>
+
+<h2>Engineers List</h2>
+<table class="table table-stiped">
+    <thead>
+        <tr>
+            <th>Engineer Id</th>
+            <th>Engineer Name</th>
+            <th>Domain</th>
+            <th>Availability</th>
+            <th>Update Domain / Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let engineer of engineers">
+            <td>{{engineer.engineerId}}</td>
+            <td>{{engineer.engineerName}}</td>
+            <td>{{engineer.domain}}</td>
+            <td>{{engineer.availability}}</td>
+            
+             <td>
+                <h1 hidden >{{engineer.engineerId}}</h1>
+               
+                <button type="button" class="btn btn-outline-info btn-sm" (click)="updateDomain(engineer.engineerId)"  routerLink = "/admin/listOfEngineer/updateDomain">Update Domain</button> &nbsp;
+                <button type="button" class="btn btn-outline-danger btn-sm" (click)="deleteEngineer(engineer.engineerId)" routerLink = "/admin/listOfEngineer/delete">Delete Product</button>
+                
+            </td> 
+        </tr>
+    </tbody> 
+</table>

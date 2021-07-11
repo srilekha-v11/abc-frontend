@@ -1,1 +1,54 @@
 /* You can add global styles to this file, and also import other style files */
+@import url("C:\Users\Sri Charan\Pictures\projectAng\abc-frontend\node_modules\bootstrap\dist\css\bootstrap.css");
+/* @import url("C:\Users\Sandeep M S\Desktop\FRONTEND\projectAng\abc-frontend\node_modules\bootstrap\dist\css\bootstrap.css"); */
+/* @import url("C:\Users\GENJOY\project-frontend\projectAng (3)\projectAng\abc-frontend\node_modules\bootstrap\dist\css\bootstrap.css"); */
+/* @import url('C:\Users\GREKHADE\Downloads\project Ang\abc-frontend\node_modules\bootstrap\dist\css\bootstrap.css'); */
+
+
+
+body{
+    background-color:white;
+}
+
+.nav-link{
+    color: #E5D549;
+    font-weight: 500;
+   font-size: 20px;
+}
+.nav-link:hover{
+    color:#EEEEEE ;
+}
+
+nav{
+    background-color: #03256C;
+}
+
+h1,h2,h3,h4,h5,h6,p{
+    color:black;
+}
+th,tr,td{
+    color: black;
+}
+input,label{
+    color: whitesmoke;
+}
+
+.nav-link:hover{
+    color: white;
+}
+/* .navBrand{
+    font-weight: 800;
+    padding: 10px 20px;
+    font-size: 30px;
+} */
+
+
+/* .align{
+    text-align: center;
+    text-color: white;
+    font-size: medium;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 700;
+    padding: 200px 0;
+    
+} */

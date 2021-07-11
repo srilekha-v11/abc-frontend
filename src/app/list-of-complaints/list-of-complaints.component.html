@@ -1,0 +1,43 @@
+<nav
+  class="navbar navbar-expand-sm"
+  fixed-top
+>
+<a class="nav-link navBrand" href="#">
+  <i class="fab fa-asymmetrik"></i> 
+  AEc
+</a>
+  <ul class="navbar-nav">
+    <li class="nav-item">
+        <p hidden>{{clientId}}</p>
+      <a class="nav-link" [routerLink]="['/client/logged/',clientId]" >back</a>
+    </li>
+
+  </ul>
+</nav>
+<h1>Your Complaints</h1>
+<table class="table table-stiped">
+  <thead>
+    <tr>
+      <th>Complaint Id</th>
+      <th>Product ModelNumber</th>
+      <th>Status</th>
+      <th>Update status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let complaint of complaintList">
+      <td>{{ complaint.complaintId }}</td>
+      <td>{{ complaint.productModelNumber }}</td>
+      <td>{{ complaint.status }}</td>
+      <td>
+        <button
+          type="button"
+          class="btn btn-outline-danger btn-sm"
+          (click)="changeStatus(complaint.complaintId)"
+          
+        >Update Status</button
+        >&nbsp;
+      </td>
+    </tr>
+  </tbody>
+</table>

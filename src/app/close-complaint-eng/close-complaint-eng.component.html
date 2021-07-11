@@ -1,0 +1,35 @@
+  <nav class="navbar navbar-expand-sm " fixed-top>
+    <ul class="navbar-nav">
+      <li nav-link>
+        <a class="nav-link navBrand" routerLink="/client">
+          <i class="fab fa-asymmetrik"></i> 
+          AEc
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/engineer/engComplaints/{{id}}">back</a>
+    </li>
+
+    </ul>
+  </nav>
+
+  <table class="table table-stiped">
+    <thead>
+        <tr>
+            <!-- <th>Engineer Id</th> -->
+            <th>Complaint Id</th>
+            <th>Model Number</th>
+            <th>Complaint Name</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let complaint of complaintResponse">
+            <td>{{complaint.complaintId}}</td>
+            <!-- <td>{{complaint.engineerId}}</td> -->
+            <td>{{complaint.productModelNumber}}</td>
+            <td>{{complaint.complaintName}}</td>
+            <td>{{complaint.status}}</td>
+        </tr>
+    </tbody>
+</table>
