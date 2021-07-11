@@ -1,0 +1,25 @@
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+.font {
+  font-family: "Hind", sans-serif;
+  font-size: 150px;
+  font-weight: 1000;
+  color:white;
+}
+.centered-l {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+.centered:hover{
+    font-size: 153px;
+}
+.centered-l:hover{
+    font-size: 155px;
+}

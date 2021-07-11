@@ -15,7 +15,7 @@
   </ul>
 </nav>
 <h1>Your Complaints</h1>
-<table class="table table-stiped">
+<table class="table  table-stiped table-striped">
   <thead>
     <tr>
       <th>Complaint Id</th>
@@ -31,8 +31,8 @@
       <td>{{ complaint.status }}</td>
       <td>
         <button
-          type="button"
-          class="btn btn-outline-danger btn-sm"
+          type="button "
+          class="btn btn-grad"
           (click)="changeStatus(complaint.complaintId)"
           
         >Update Status</button

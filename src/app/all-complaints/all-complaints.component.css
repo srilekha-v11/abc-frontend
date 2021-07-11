@@ -1,0 +1,18 @@
+table{
+    padding: 10px 20px;
+    table-layout: inherit;
+    border: lavender;
+    border-width: 4px;
+}
+table:hover{
+    
+    border-color: lightblue;
+}
+h2{
+    text-align: center;
+    background-color: lightgray;
+}
+td{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+}

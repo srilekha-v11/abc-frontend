@@ -1,0 +1,58 @@
+table{
+    padding: 10px 20px;
+    table-layout: inherit;
+    border: lavender;
+    border-width: 4px;
+}
+table:hover{
+    
+    border-color: lightblue;
+}
+h2{
+    text-align: center;
+    background-color: lightgray;
+}
+td{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+}
+
+
+.btn-grad1 {background-image: linear-gradient(to right, #085078 0%, #85D8CE  20%, #085078  100%)}
+.btn-grad1 {
+ 
+   text-align: center;
+   text-transform: uppercase;
+   transition: 0.5s;
+   background-size: 200% auto;
+   color: white;            
+   box-shadow: 0 0 20px #eee;
+   border-radius: 10px;
+ 
+ }
+
+ .btn-grad1:hover {
+   background-position: right center; /* change the direction of the change here */
+   color: #fff;
+   text-decoration: none;
+ }
+
+ 
+ .btn-grad {background-image: linear-gradient(to right, #EB3349 0%, #F45C43  51%, #EB3349  100%)}
+ .btn-grad {
+    
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;            
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+  }
+
+  .btn-grad:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+  }
+ 

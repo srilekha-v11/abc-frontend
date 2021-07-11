@@ -15,7 +15,7 @@
   </nav>
 
 <h2>Product List</h2>
-<table class="table  table-borderless">
+<table class="table  table-striped table-stiped">
     <thead>
         <tr>
             <th>Client Id</th>
@@ -39,10 +39,10 @@
                 <h1 hidden >{{product.productId}}</h1>
                 <h1 hidden >{{product.modelNumber}}</h1>
                 <h1 hidden>{{client.clientId}}</h1>
-                <button type="button" class="btn btn-outline-warning btn-sm" (click)="viewProduct(product.productId)" routerLink = "/client/product/viewProduct">View Product</button>&nbsp;
-                <button type="button" class="btn btn-outline-info btn-sm" (click)="UpdateProduct(product.productId,client.clientId)"  routerLink = "/client/product/UpdateProduct/:productId">Update Product</button> &nbsp;
-                <button type="button" class="btn btn-outline-danger btn-sm" (click)="deleteProduct(product.productId,client.clientId)" routerLink = "/client/product/deleteProduct">Delete Product</button>&nbsp;
-                <button type="button" class="btn btn-outline-primary btn-sm" (click)="bookComplaint(product.productId,client.clientId,product.modelNumber)" >Add Complaint</button>
+                <button type="button" class="btn btn-grad four btn-sm" (click)="viewProduct(product.productId)" routerLink = "/client/product/viewProduct">View Product</button>&nbsp;
+                <button type="button" class="btn btn-grad  three btn-sm" (click)="UpdateProduct(product.productId,client.clientId)"  routerLink = "/client/product/UpdateProduct/:productId">Update Product</button> &nbsp;
+                <button type="button" class="btn btn-grad two btn-sm" (click)="deleteProduct(product.productId,client.clientId)" routerLink = "/client/product/deleteProduct">Delete Product</button>&nbsp;
+                <button type="button" class="btn btn-grad one btn-sm" (click)="bookComplaint(product.productId,client.clientId,product.modelNumber)" >Add Complaint</button>
                 <!-- routerLink = "/client/product/bookComplaint/" -->
                 
             </td>

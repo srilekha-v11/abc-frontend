@@ -1,0 +1,21 @@
+.color{
+    background-color: #AAD8D3;
+    padding: 60px 0px;
+}
+.text-muted:hover{
+    border: cadetblue;
+    opacity: 1
+}
+.centered {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #AAD8D3;
+  }
+  .font {
+    font-family:monospace;
+    font-size: 80px;
+    font-weight: 600;
+    color:white;
+  }

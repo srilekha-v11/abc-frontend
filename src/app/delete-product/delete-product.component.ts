@@ -37,7 +37,7 @@ export class DeleteProductComponent implements OnInit {
   }
   dontDeleteProduct(){
    alert("product Not Deleted");
-   this.navigateToProductList(this.client.clientId);  
+   this.navigateToProductList(this.clientId);  
   }
   navigateToProductList(clientId:any){
     this.router.navigate(['/client/product/productList/',clientId]);

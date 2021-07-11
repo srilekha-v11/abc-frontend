@@ -9,12 +9,12 @@
     </ul>
 </nav>
 
-<h1 class="styling">Update Domain</h1>
-<div class="col-3">
+<div class="center">
+<div class="center">
     <form  (ngSubmit)="onSubmit()" class="styling">
        
         <div class="form-group cSpacing">
-            <label>Domain </label> &nbsp; &nbsp; &nbsp;
+            <label><h3>Domain</h3></label> &nbsp; &nbsp; &nbsp;
             <select [(ngModel)]="engineer.domain" id="domain" name="domain">
             <option value="none"  disabled hidden></option>
             <option value="Air Conditioner">Air Conditioner</option>
@@ -30,8 +30,9 @@
 
         <br>
         <div>
-            <button class="btn btn-success" type="submit">Update Engineer</button>
+            <button class="btn btn-grad" type="submit">Update Engineer</button>
         </div>
 
     </form>
+</div>
 </div>

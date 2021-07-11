@@ -14,8 +14,8 @@
   </ul>
 </nav>
 
-<h2>Engineers List</h2>
-<table class="table table-stiped">
+<!-- <h2>Engineers List</h2> -->
+<table class="table table-striped">
     <thead>
         <tr>
             <th>Engineer Id</th>
@@ -35,8 +35,8 @@
              <td>
                 <h1 hidden >{{engineer.engineerId}}</h1>
                
-                <button type="button" class="btn btn-outline-info btn-sm" (click)="updateDomain(engineer.engineerId)"  routerLink = "/admin/listOfEngineer/updateDomain">Update Domain</button> &nbsp;
-                <button type="button" class="btn btn-outline-danger btn-sm" (click)="deleteEngineer(engineer.engineerId)" routerLink = "/admin/listOfEngineer/delete">Delete Product</button>
+                <button type="button" class="btn btn-grad1 btn-sm" (click)="updateDomain(engineer.engineerId)"  routerLink = "/admin/listOfEngineer/updateDomain">Update Domain</button> &nbsp;
+                <button type="button" class="btn btn-grad btn-sm" (click)="deleteEngineer(engineer.engineerId)" routerLink = "/admin/listOfEngineer/delete">Delete Product</button>
                 
             </td> 
         </tr>

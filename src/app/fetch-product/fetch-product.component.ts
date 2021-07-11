@@ -19,6 +19,7 @@ export class FetchProductComponent implements OnInit {
   ngOnInit(): void {
     this.clientId = this.route.snapshot.params['clientId'];
     this.id = this.route.snapshot.params['productId'];
+    this.getProduct(this.id);
  
   }
 
@@ -26,7 +27,7 @@ export class FetchProductComponent implements OnInit {
     this.productId=value;
     this.productService.getProductById(this.productId).subscribe(data=>{console.log(data);this.product=data},error => console.log(error) );
     // write method to display
-    this.inputId.nativeElement.value="";
+    // this.inputId.nativeElement.value="";
     
   }
 

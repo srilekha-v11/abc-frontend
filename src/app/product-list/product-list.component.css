@@ -1,0 +1,49 @@
+.one {
+  background-image: linear-gradient(
+    to right,
+    #f2994a 0%,
+    #f2c94c 51%,
+    #f2994a 100%
+  );
+}
+.two {
+  background-image: linear-gradient(
+    to right,
+    #eb5757 0%,
+    #000000 51%,
+    #eb5757 100%
+  );
+}
+.three {
+  background-image: linear-gradient(
+    to right,
+    #56ccf2 0%,
+    #2f80ed 51%,
+    #56ccf2 100%
+  );
+}
+.four {
+  background-image: linear-gradient(
+    to right,
+    #b2fefa 0%,
+    #0ed2f7 51%,
+    #b2fefa 100%
+  );
+}
+
+.btn-grad {
+    padding: 6px 8px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 5px;
+}
+
+.btn-grad:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}

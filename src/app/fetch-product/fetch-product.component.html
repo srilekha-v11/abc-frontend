@@ -11,11 +11,12 @@
   </ul>
 </nav>
 
-<div>
+<div class="align">
      
-    <div [style.display]="product.productId ? 'block': 'none'">
+    <!-- <div [style.display]="product.productId ? 'block': 'none'"> -->
         <h1 >Details of Product with id {{product.productId}}</h1>
-     
+
+        <img src="https://www.sathya.in/Media/Default/Thumbs/0036/0036893-home-appliances.jpg" alt="">
         <h3 >Name: {{product.productName}}</h3>
         <h3 >Model Number: {{product.modelNumber}}</h3>
         <h3> Category Name: {{product.productCategoryName}}</h3>
@@ -25,4 +26,4 @@
         
         <!-- <h3 >Date Of Purchase: {{product.dop}}</h3> -->
         </div>
-    </div>
+    <!-- </div> -->

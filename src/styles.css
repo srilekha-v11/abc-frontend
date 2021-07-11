@@ -23,33 +23,9 @@ nav{
     background-color: #03256C;
 }
 
-h1,h2,h3,h4,h5,h6,p{
-    color:black;
-}
-th,tr,td{
-    color: black;
-}
-input,label{
-    color: whitesmoke;
-}
 
 .nav-link:hover{
     color: #A2DBFA;
 
 }
-/* .navBrand{
-    font-weight: 800;
-    padding: 10px 20px;
-    font-size: 30px;
-} */
 
-
-/* .align{
-    text-align: center;
-    text-color: white;
-    font-size: medium;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: 700;
-    padding: 200px 0;
-    
-} */

@@ -10,31 +10,30 @@
   </ul>
 </nav>
 
-<h2>View compliants Based On Status</h2>
 
-<label for="status">Status : </label>
 <!-- <input type="text" class= "col-3" id="status" [(ngModel)]="status" placeholder="status" name="status"> -->
 <div class="form-group cSpacing">
+  <label for="status" class="label"><h3> Status : </h3></label>
   <select id="status" name="status" [(ngModel)]="status">
-    <option value="none" disabled hidden></option>
     <option value="open">Open</option>
     <option value="close">Close</option>
   </select>
-  <button class="btn btn-info" type="submit" (click)="getComplaints()">
+  <button class="btn btn-grad" type="submit" (click)="getComplaints()">
     Get Complaints
   </button>
 </div>
 
 <div [style.display]="status ? 'block' : 'none'">
-  <table class="table table-stiped">
+  <h6>Showing results of complaints with Status {{status}}</h6>
+  <table class="table table-stiped table-striped  thead-dark">
     <tr>
-      <th>Complaint Id</th>
-      <th>productModel Number</th>
-      <th>Complaint Name</th>
-      <th>Complaint Date</th>
-      <th>Status</th>
+      <th >Complaint Id</th>
+      <th >productModel Number</th>
+      <th >Complaint Name</th>
+      <th >Complaint Date</th>
+      <th >Status</th>
     </tr>
-    <tr *ngFor="let complaint of complaints">
+    <tr *ngFor="let complaint of complaints" >
       <td>{{ complaint.complaintId }}</td>
       <td>{{ complaint.productModelNumber }}</td>
       <td>{{ complaint.complaintName }}</td>
@@ -43,5 +42,3 @@
     </tr>
   </table>
 </div>
-<!-- <h1 >Details of complaint with status {{}}</h1> -->
-<!-- <h3 >Name: {{message}}</h3> -->
