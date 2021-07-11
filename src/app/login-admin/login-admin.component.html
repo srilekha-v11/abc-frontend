@@ -13,22 +13,26 @@
   </ul>
 </nav>
 
+<section>
+<div class="container-fluid centerAllign">
 
-<div class="container centerAllign">
-  
+  <h2>Login </h2>
     <div class=row>
-        <div class="col col-lg">
+        <div  >
             <div class="forms">
-                <form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm.value)">
+                <form class="="form-container #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm.value)">
                     <div class="form-group">
-                        <label>Phone Number</label>
+                        <label class="text-label">Phone Number</label>
                         <input type="text" #email class="form-control" id="phoneNumber" ngModel name="phoneNumber" required>
                     </div>
+                    <br>
+                    
                     <div class="form-group">
-                        <label>Password</label>
+                        <label class="text-label">Password</label>
                         <input type="password" #password class="form-control" id="password" ngModel name="password" required>
                     </div>
-                     <button [disabled]="loginForm.invalid" class="btn btn-success" type="submit">Login</button>
+                    <br>
+                     <button [disabled]="loginForm.invalid" class="btn btn-success btn-lg" type="submit">Login</button>
                     <!-- <button class="btn btn-success" type="submit">Login</button> -->
                 </form>
                 
@@ -36,3 +40,4 @@
         </div>
     </div>
 </div>
+</section>

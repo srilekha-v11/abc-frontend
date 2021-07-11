@@ -11,7 +11,7 @@ body{
 }
 
 .nav-link{
-    color: #E5D549;
+    color: white;
     font-weight: 500;
    font-size: 20px;
 }
@@ -34,7 +34,8 @@ input,label{
 }
 
 .nav-link:hover{
-    color: white;
+    color: #A2DBFA;
+
 }
 /* .navBrand{
     font-weight: 800;
