@@ -31,12 +31,20 @@ element.style {
   margin: 0 60px;
 }
 
-h1{ 
-    font-weight: 800;
+h1 {
+  font-weight: 800;
 }
-.plane{
-    font-family:'Open Sans', sans-serif;;
+.plane {
+  font-family: "Open Sans", sans-serif;
 }
-.padding{
-    padding: 20px 0;
+.padding {
+  padding: 20px 0;
+}
+.align {
+  text-align: center;
+  font-family: "Hind", sans-serif;
+  color: white;
+  font-weight: 600;
+  background-color: #0a043c;
+  padding: 5px 0;
 }

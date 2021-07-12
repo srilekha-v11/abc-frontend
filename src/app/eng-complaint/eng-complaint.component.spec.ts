@@ -8,9 +8,8 @@ describe('EngComplaintComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ EngComplaintComponent ]
-    })
-    .compileComponents();
+      declarations: [EngComplaintComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

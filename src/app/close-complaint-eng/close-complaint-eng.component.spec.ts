@@ -8,9 +8,8 @@ describe('CloseComplaintEngComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CloseComplaintEngComponent ]
-    })
-    .compileComponents();
+      declarations: [CloseComplaintEngComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

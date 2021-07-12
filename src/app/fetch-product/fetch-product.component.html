@@ -1,29 +1,21 @@
-<nav
-  class="navbar navbar-expand-sm"
-  fixed-top
->
+<nav class="navbar navbar-expand-sm" fixed-top>
   <ul class="navbar-nav">
-    <a class="nav-link navBrand" >
-        <i class="fab fa-asymmetrik"></i> 
-        AEc
-      </a>
-
+    <a class="nav-link navBrand">
+      <i class="fab fa-asymmetrik"></i>
+      AEc
+    </a>
   </ul>
 </nav>
 
+<!-- project details -->
 <div class="align">
-     
-    <!-- <div [style.display]="product.productId ? 'block': 'none'"> -->
-        <h1 >Details of Product with id {{product.productId}}</h1>
-
-        <img src="https://www.sathya.in/Media/Default/Thumbs/0036/0036893-home-appliances.jpg" alt="">
-        <h3 >Name: {{product.productName}}</h3>
-        <h3 >Model Number: {{product.modelNumber}}</h3>
-        <h3> Category Name: {{product.productCategoryName}}</h3>
-        
-        <h3 >Warranty Date: {{product.warrantyYears}}</h3>
-        <h3 >Date of Purchase: {{product.dateofPurchase | date}}</h3>
-        
-        <!-- <h3 >Date Of Purchase: {{product.dop}}</h3> -->
-        </div>
-    <!-- </div> -->
+  <img
+    src="https://www.sathya.in/Media/Default/Thumbs/0036/0036893-home-appliances.jpg"
+    alt=""
+  />
+  <h3 class="big">Name: {{ product.productName }}</h3>
+  <h3 class="big">Model Number: {{ product.modelNumber }}</h3>
+  <h3 class="big">Category Name: {{ product.productCategoryName }}</h3>
+  <h3 class="big">Warranty Years: {{ product.warrantyYears }}</h3>
+  <h3 class="big">Date of Purchase: {{ product.dateofPurchase | date }}</h3>
+</div>

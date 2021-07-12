@@ -1,80 +1,114 @@
-<nav class="navbar navbar-expand-sm " fixed-top>
-    <ul class="navbar-nav">
+<!-- nav bar -->
+<nav class="navbar navbar-expand-sm" fixed-top>
+  <ul class="navbar-nav">
+    <a class="nav-link navBrand" href="#">
+      <i class="fab fa-asymmetrik"></i>
+      AEc
+    </a>
 
-        <a class="nav-link navBrand" href="#">
-            <i class="fab fa-asymmetrik"></i> 
-            AEc
-          </a>
-          
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/client/logged/product/{{idc}}">back</a>
-          </li>
-
-    </ul>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/client/logged/product/{{ idc }}"
+        ><i class="fas fa-arrow-circle-left"></i
+      ></a>
+    </li>
+  </ul>
 </nav>
 <!-- Update product Code -->
-<h1 class="styling">Update Product</h1>
-<div class="col-3 align">
-    <form #addProduct="ngForm" (ngSubmit)="onSubmit()" class="styling">
-
+<section>
+  <div class="center container">
+    <div>
+      <form #addProduct="ngForm" (ngSubmit)="onSubmit()" class="styling">
         <div class="form-group">
-            <label>Product Name</label>
-            <input type="text" class="form-control" id="productName" [(ngModel)]="product.productName" name="productName"
-            #productName="ngModel" required>
+          <label>Product Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="productName"
+            [(ngModel)]="product.productName"
+            name="productName"
+            #productName="ngModel"
+            required
+          />
         </div>
 
         <div class="col-10" *ngIf="productError?.productName">
-            <span class="text text-danger">{{productError.productName}}</span>
-          </div>
+          <span class="text text-danger">{{ productError.productName }}</span>
+        </div>
 
         <div class="form-group">
-            <label>Model Number</label>
-            <input type="text" class="form-control" id="modelNumber" [(ngModel)]="product.modelNumber" name="modelNumber" required>
+          <label>Model Number</label>
+          <input
+            type="text"
+            class="form-control"
+            id="modelNumber"
+            [(ngModel)]="product.modelNumber"
+            name="modelNumber"
+            required
+          />
         </div>
         <div class="col-10" *ngIf="productError?.modelNumber">
-            <span class="text text-danger">{{productError.modelNumber}}</span>
-          </div>
+          <span class="text text-danger">{{ productError.modelNumber }}</span>
+        </div>
 
         <div class="form-group cSpacing">
-            <label>Category Name </label> &nbsp; &nbsp; &nbsp;
-            <select id="categoryName" name="productCategoryName" id="productCategoryName" [(ngModel)]="product.productCategoryName" required>
-            <option value="none"  disabled hidden></option>
+          <label>Category Name </label> &nbsp; &nbsp; &nbsp;
+          <select
+            id="categoryName"
+            name="productCategoryName"
+            id="productCategoryName"
+            [(ngModel)]="product.productCategoryName"
+            required
+          >
+            <option value="none" disabled hidden></option>
             <option value="Air Conditioner">Air Conditioner</option>
             <option value="Washing Machine">Washing Machine</option>
             <option value="mobile">Mobile</option>
             <option value="Television">Television</option>
-            </select>
+          </select>
         </div>
         <div class="col-10" *ngIf="productError?.productCategoryName">
-            <span class="text text-danger">{{productError.productCategoryName}}</span>
-          </div>
-
-        <!-- <div class="form-group">
-            <label>Warrenty Date</label>
-            <input type="date" class="form-control" id="dop" ngModel name="dop">
-        </div> -->
-
-        <div class="form-group ">
-            <label>Warranty Years</label>
-            <input type="number" class="form-control" id="warrantyYears" [(ngModel)]="product.warrantyYears" name="warrantyYears" required>
+          <span class="text text-danger">{{
+            productError.productCategoryName
+          }}</span>
         </div>
-        <div class="col-10" *ngIf="productError?.warrantyYears">
-            <span class="text text-danger">{{productError.warrantyYears}}</span>
-          </div>
 
         <div class="form-group">
-            <label>Date of Purchase</label>
-            <input type="date" class="form-control" id="dateofPurchase" [(ngModel)]="product.dateofPurchase" name="dateofPurchase" required>
+          <label>Warranty Years</label>
+          <input
+            type="number"
+            class="form-control"
+            id="warrantyYears"
+            [(ngModel)]="product.warrantyYears"
+            name="warrantyYears"
+            required
+          />
+        </div>
+        <div class="col-10" *ngIf="productError?.warrantyYears">
+          <span class="text text-danger">{{ productError.warrantyYears }}</span>
+        </div>
+
+        <div class="form-group">
+          <label>Date of Purchase</label>
+          <input
+            type="date"
+            class="form-control"
+            id="dateofPurchase"
+            [(ngModel)]="product.dateofPurchase"
+            name="dateofPurchase"
+            required
+          />
         </div>
         <div class="col-10" *ngIf="productError?.dateofPurchase">
-            <span class="text text-danger">{{productError.dateofPurchase}}</span>
-          </div>
-
-        <br>
-        <div>
-            
-            <button class="btn btn-success" type="submit">Update Product</button>
+          <span class="text text-danger">{{
+            productError.dateofPurchase
+          }}</span>
         </div>
 
-    </form>
-</div>
+        <br />
+        <div>
+          <button class="btn btn-success" type="submit">Update Product</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>

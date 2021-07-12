@@ -4,14 +4,10 @@ import { ActivatedRoute, Router } from '@angular/router';
 @Component({
   selector: 'app-client',
   templateUrl: './client.component.html',
-  styleUrls: ['./client.component.css']
+  styleUrls: ['./client.component.css'],
 })
 export class ClientComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  
-  }
-
+  ngOnInit(): void {}
 }

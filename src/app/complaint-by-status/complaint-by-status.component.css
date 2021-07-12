@@ -1,64 +1,80 @@
-label{
-    color: black;
-    font-weight: 700;
-    font-family: 'Hind', sans-serif;;
-    font-size: small; 
+label {
+  color: black;
+  font-weight: 700;
+  font-family: "Hind", sans-serif;
+  font-size: small;
 }
-button{
-    margin: 0 10px;
+button {
+  margin: 0 10px;
 }
-select{
-    width: 120px;
-    margin: 0 10px;
-    border-style: groove;
-    align-items: center;
+select {
+  width: 120px;
+  margin: 0 10px;
+  border-style: groove;
+  align-items: center;
 }
-select:hover{
-    border-color: cadetblue;
+select:hover {
+  border-color: cadetblue;
 }
-table{
-    margin-top: 20px;
+table {
+  margin-top: 20px;
 
-    padding: 10px 20px;
-    table-layout: inherit;
-    border: lavender;
-    border-width: 4px;
+  padding: 10px 20px;
+  table-layout: inherit;
+  border: lavender;
+  border-width: 4px;
 }
-table:hover{
-    
-    border-color: lightblue;
+table:hover {
+  border-color: lightblue;
 }
-h2{
-    text-align: center;
-    background-color: lightgray;
+h2 {
+  text-align: center;
+  background-color: lightgray;
 }
-td{
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 700;
+td {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
 }
-.btn{
-    font-weight: 700;
+.btn {
+  font-weight: 700;
 }
-.cSpacing{
-    margin-top: 10px;
+.cSpacing {
+  margin-top: 10px;
 }
 
-.btn-grad {background-image: linear-gradient(to right, #3a7bd5 0%, #3a6073  51%, #3a7bd5  100%)}
 .btn-grad {
-   margin: 2px;
-   padding: 15px 30px;
-   text-align: center;
-   text-transform: uppercase;
-   transition: 0.5s;
-   background-size: 200% auto;
-   color: white;            
-   box-shadow: 0 0 20px #eee;
-   border-radius: 10px;
+  background-image: linear-gradient(
+    to right,
+    #3a7bd5 0%,
+    #3a6073 51%,
+    #3a7bd5 100%
+  );
+}
+.btn-grad {
+  margin: 2px;
+  padding: 15px 30px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+}
 
- }
-
- .btn-grad:hover {
-   background-position: right center; /* change the direction of the change here */
-   color: #fff;
-   text-decoration: none;
- }
+.btn-grad:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+.font {
+  font-family: "Hind", sans-serif;
+  font-size: 20px;
+}
+td.font {
+  font-family: "Hind", sans-serif;
+  font-size: 18px;
+}
+table {
+  text-align: center;
+}

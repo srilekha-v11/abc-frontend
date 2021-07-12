@@ -21,9 +21,9 @@ export class ListOfComplaintsComponent implements OnInit {
 
   ngOnInit(): void {
     this.clientId = this.route.snapshot.params['clientId'];
-    this.clientService
-      .clientById(this.clientId)
-      .subscribe((data) =>{ (this.client = data),console.log(data)});
+    this.clientService.clientById(this.clientId).subscribe((data) => {
+      (this.client = data), console.log(data);
+    });
 
     this.complaintService.listOfComplaints(this.clientId).subscribe(
       (data) => {

@@ -1,6 +1,6 @@
 import { ErrorHandler, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import{NgxPaginationModule} from 'ngx-pagination'
+import { NgxPaginationModule } from 'ngx-pagination';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -19,7 +19,6 @@ import { ProductListComponent } from './product-list/product-list.component';
 import { ProductComponent } from './product/product.component';
 import { ComplaintByStatusComponent } from './complaint-by-status/complaint-by-status.component';
 import { DeleteEngineerComponent } from './delete-engineer/delete-engineer.component';
-import { EngineerByComplaintComponent } from './engineer-by-complaint/engineer-by-complaint.component';
 import { BookComplaintComponent } from './book-complaint/book-complaint.component';
 import { AllComplaintsComponent } from './all-complaints/all-complaints.component';
 import { EngineerListComponent } from './engineer-list/engineer-list.component';
@@ -41,8 +40,6 @@ import { EngineerLoggedComponent } from './engineer-logged/engineer-logged.compo
 import { ErrorComponent } from './error/error.component';
 import { GlobalErrorHandler } from './global-error-handler.service';
 
-
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -59,7 +56,6 @@ import { GlobalErrorHandler } from './global-error-handler.service';
     ProductComponent,
     ComplaintByStatusComponent,
     DeleteEngineerComponent,
-    EngineerByComplaintComponent,
     BookComplaintComponent,
     AllComplaintsComponent,
     EngineerListComponent,
@@ -80,7 +76,6 @@ import { GlobalErrorHandler } from './global-error-handler.service';
     EngineerLoggedComponent,
     ErrorComponent,
     // GlobalErrorHandler
-
   ],
   imports: [
     BrowserModule,
@@ -90,12 +85,8 @@ import { GlobalErrorHandler } from './global-error-handler.service';
     HttpClientModule,
     NgxPaginationModule,
   ],
-  exports: [
-    HttpClientModule
-  ],
-  providers: [
-    { provide: ErrorHandler, useClass:GlobalErrorHandler}
-  ],
-  bootstrap: [AppComponent]
+  exports: [HttpClientModule],
+  providers: [{ provide: ErrorHandler, useClass: GlobalErrorHandler }],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

@@ -8,9 +8,8 @@ describe('UpdateEngDomainComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ UpdateEngDomainComponent ]
-    })
-    .compileComponents();
+      declarations: [UpdateEngDomainComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

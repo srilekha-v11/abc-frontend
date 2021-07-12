@@ -1,43 +1,48 @@
 .float-container {
-    border: 3px solid #fff;
-    padding-top: 0;
-    padding: 20px;
+  border: 3px solid #fff;
+  padding-top: 0;
+  padding: 20px;
 }
 
 .float-child {
-    width: 30%;
-    float: left;
-    padding-top: 0;
-    padding: 20px;
-    
-}  
-img{
-    width: 100%;
+  width: 30%;
+  float: left;
+  padding-top: 0;
+  padding: 20px;
+}
+img {
+  width: 100%;
 }
 .float-child2 {
-    width: 70%;
-    float: left;
-    padding-top: 0;
-    padding: 20px;
-   
-}  
+  width: 70%;
+  float: left;
+  padding-top: 0;
+  padding: 20px;
+}
 
-.btn-grad {background-image: linear-gradient(to right, #314755 0%, #26a0da  51%, #314755  100%)}
 .btn-grad {
-   margin: 10px;
-   padding: 15px 45px;
-   text-align: center;
-   text-transform: uppercase;
-   transition: 0.5s;
-   background-size: 200% auto;
-   color: white;            
-   box-shadow: 0 0 20px #eee;
-   border-radius: 10px;
-   display: block;
- }
+  background-image: linear-gradient(
+    to right,
+    #314755 0%,
+    #26a0da 51%,
+    #314755 100%
+  );
+}
+.btn-grad {
+  margin: 10px;
+  padding: 15px 45px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  display: block;
+}
 
- .btn-grad:hover {
-   background-position: right center; /* change the direction of the change here */
-   color: #fff;
-   text-decoration: none;
- }
+.btn-grad:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}

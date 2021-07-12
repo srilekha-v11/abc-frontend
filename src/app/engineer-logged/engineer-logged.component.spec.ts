@@ -8,9 +8,8 @@ describe('EngineerLoggedComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ EngineerLoggedComponent ]
-    })
-    .compileComponents();
+      declarations: [EngineerLoggedComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

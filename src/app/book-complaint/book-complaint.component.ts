@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Complaint } from '../complaint';
-import { ComplaintService } from '../view-main/services/complaint.service'; 
+import { ComplaintService } from '../view-main/services/complaint.service';
 import { Product } from '../product';
-import { ProductService } from '../view-main/services/product.service'; 
+import { ProductService } from '../view-main/services/product.service';
 
 @Component({
   selector: 'app-book-complaint',
@@ -12,7 +12,7 @@ import { ProductService } from '../view-main/services/product.service';
 })
 export class BookComplaintComponent implements OnInit {
   bookedComplaint: any;
-  clientId:any;
+  clientId: any;
   modelNumber: any;
   complaint: Complaint = new Complaint();
   id: any;
@@ -34,23 +34,26 @@ export class BookComplaintComponent implements OnInit {
       (this.product = data), console.log(data);
     });
     console.log(this.product);
-
   }
 
   onSubmit() {
-    if(this.complaint.productModelNumber==this.modelNumber){
-    this.complaintService.bookAComplaint(this.clientId,this.complaint).subscribe(
-      (data) => {
-        (this.bookedComplaint = data),
-          console.log(this.bookedComplaint),
-          alert("Your Complaint has been Registered and will be Resolved within 12 days"),
-          this.navigateToCompliants(this.clientId);
-      },
-      (error) => console.log(error)
-    )}
-    else{
-      alert("Product Model number mismatch");
-    };
+    if (this.complaint.productModelNumber == this.modelNumber) {
+      this.complaintService
+        .bookAComplaint(this.clientId, this.complaint)
+        .subscribe(
+          (data) => {
+            (this.bookedComplaint = data),
+              console.log(this.bookedComplaint),
+              alert(
+                'Your Complaint has been Registered and will be Resolved within 12 days'
+              ),
+              this.navigateToCompliants(this.clientId);
+          },
+          (error) => console.log(error)
+        );
+    } else {
+      alert('Product Model number mismatch');
+    }
   }
 
   navigateToCompliants(clientId: number) {

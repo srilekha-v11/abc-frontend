@@ -8,9 +8,8 @@ describe('RegisterEngineerComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ RegisterEngineerComponent ]
-    })
-    .compileComponents();
+      declarations: [RegisterEngineerComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

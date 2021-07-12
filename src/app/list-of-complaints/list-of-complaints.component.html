@@ -1,21 +1,20 @@
-<nav
-  class="navbar navbar-expand-sm"
-  fixed-top
->
-<a class="nav-link navBrand" href="#">
-  <i class="fab fa-asymmetrik"></i> 
-  AEc
-</a>
+<nav class="navbar navbar-expand-sm" fixed-top>
+  <a class="nav-link navBrand" href="#">
+    <i class="fab fa-asymmetrik"></i>
+    AEc
+  </a>
   <ul class="navbar-nav">
     <li class="nav-item">
-        <p hidden>{{clientId}}</p>
-      <a class="nav-link" [routerLink]="['/client/logged/',clientId]" >back</a>
+      <p hidden>{{ clientId }}</p>
+      <a class="nav-link" [routerLink]="['/client/logged/', clientId]"
+        ><i class="fas fa-arrow-circle-left"></i
+      ></a>
     </li>
-
   </ul>
 </nav>
-<h1>Your Complaints</h1>
-<table class="table  table-stiped table-striped">
+
+<!-- List of complaints  -->
+<table class="table table-stiped table-striped">
   <thead>
     <tr>
       <th>Complaint Id</th>
@@ -34,8 +33,8 @@
           type="button "
           class="btn btn-grad"
           (click)="changeStatus(complaint.complaintId)"
-          
-        >Update Status</button
+        >
+          Update Status</button
         >&nbsp;
       </td>
     </tr>

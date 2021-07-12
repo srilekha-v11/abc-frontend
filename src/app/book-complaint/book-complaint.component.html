@@ -1,77 +1,95 @@
 <!-- nav Bar routing to home : Client -->
-<nav
-  class="navbar navbar-expand-sm"
-  fixed-top
->
+
+<nav class="navbar navbar-expand-sm" fixed-top>
   <ul class="navbar-nav">
     <a class="nav-link navBrand" href="#">
-      <i class="fab fa-asymmetrik"></i> 
+      <i class="fab fa-asymmetrik"></i>
       AEc
     </a>
-    
+
     <li class="nav-item">
-      <a class="nav-link" routerLink="/client/logged/product/{{clientId}}">Home</a>
+      <a class="nav-link" routerLink="/client/logged/product/{{ clientId }}"
+        ><i class="fas fa-home"></i
+      ></a>
     </li>
   </ul>
-  
 </nav>
 
 <!-- Book Complaint Form  -->
-
-<div class="container">
-  <h1 class="styling">Add a Complaint</h1>
-  <div class="col-3 align">
-    <form
-      #addProduct="ngForm"
-      style="text-align: center"
-      (ngSubmit)="onSubmit()"
-      class="styling"
-    >
-      <div class="form-group">
-        <label>Product Model Number</label>
-        <input
-          type="text"
-          class="form-control"
-          id="productModelNumber"
-          [(ngModel)]="complaint.productModelNumber"
-          name="productModelNumber" required
-        />
-      </div>
-
-      <div class="form-group">
-        <label>Complaint Name</label>
-        <input
-          type="text"
-          class="form-control"
-          id="complaintName"
-          [(ngModel)]="complaint.complaintName"
-          name="complaintName" required
-        />
-      </div>
-      <br/>
-      <div class="form-group cSpacing">
-        <label> Status</label> &nbsp; &nbsp; &nbsp;
-        <select name="status" id="status" [(ngModel)]="complaint.status" required> 
-          <option value="open">Open</option>
-        </select>
-      </div>
-
-      <div hidden class="form-group">
-        <label>Date of Purchase</label>
-        <input
-          type="date"
-          class="form-control"
-          id="complaintDate"
-          [(ngModel)]="complaint.complaintDate"
-          name="complaintDate" required
-        />
-      </div>
-
-      <br />
+<section>
+  <div class="container">
+    <div class="container">
       <div>
-        <button [disabled]="addProduct.invalid" class="btn btn-success" type="submit">Book complaint</button>
-        <!-- <button  [disabled]="addProduct.invalid" class="btn btn-success" type="submit">Book Complaint</button> -->
+        <form
+          #addProduct="ngForm"
+          style="text-align: center"
+          (ngSubmit)="onSubmit()"
+          class="styling"
+        >
+          <div class="form-group">
+            <label>Product Model Number</label>
+            <input
+              type="text"
+              class="form-control"
+              id="productModelNumber"
+              [(ngModel)]="complaint.productModelNumber"
+              name="productModelNumber"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label>Complaint Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="complaintName"
+              [(ngModel)]="complaint.complaintName"
+              name="complaintName"
+              required
+            />
+          </div>
+          <br />
+          <div class="form-group cSpacing dropdown">
+            <label> Status</label> &nbsp; &nbsp; &nbsp;
+            <select
+              name="status"
+              class="dropdown-content"
+              id="status"
+              [(ngModel)]="complaint.status"
+              required
+            >
+              <option value="open">Open</option>
+            </select>
+          </div>
+
+          <div hidden class="form-group">
+            <label>Date of Purchase</label>
+            <input
+              type="date"
+              class="form-control"
+              id="complaintDate"
+              [(ngModel)]="complaint.complaintDate"
+              name="complaintDate"
+              required
+            />
+          </div>
+
+          <br />
+          <div>
+            <button
+              [disabled]="addProduct.invalid"
+              class="btn btn-success"
+              type="submit"
+            >
+              Book complaint
+            </button>
+            <!-- <button  [disabled]="addProduct.invalid" class="btn btn-success" type="submit">Book Complaint</button> -->
+          </div>
+        </form>
       </div>
-    </form>
+    </div>
   </div>
-</div>
+  <div class="pad"></div>
+  <div class="pad"></div>
+</section>

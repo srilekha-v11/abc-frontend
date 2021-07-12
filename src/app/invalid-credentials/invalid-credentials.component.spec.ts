@@ -8,9 +8,8 @@ describe('InvalidCredentialsComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ InvalidCredentialsComponent ]
-    })
-    .compileComponents();
+      declarations: [InvalidCredentialsComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

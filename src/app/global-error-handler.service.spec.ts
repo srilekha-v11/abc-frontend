@@ -2,7 +2,6 @@ import { TestBed } from '@angular/core/testing';
 
 import { GlobalErrorHandler } from './global-error-handler.service';
 
-
 describe('GlobalErrorHandlerService', () => {
   let service: GlobalErrorHandler;
 

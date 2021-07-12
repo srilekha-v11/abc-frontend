@@ -9,9 +9,8 @@ describe('LoginAdminComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ LoginAdminComponent ]
-    })
-    .compileComponents();
+      declarations: [LoginAdminComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {
@@ -23,7 +22,6 @@ describe('LoginAdminComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-
 });
 
 // it(‘should change title to Unit Test App’, async(() => {
@@ -33,5 +31,3 @@ describe('LoginAdminComponent', () => {
 //   expect(fixture.nativeElement.querySelector(‘h1’)
 //   .textContent).toEqual('Unit Test App');
 //   }));
-  
-  

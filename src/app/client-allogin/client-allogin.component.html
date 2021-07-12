@@ -1,12 +1,12 @@
 <nav class="navbar navbar-expand-sm">
   <ul class="navbar-nav">
-      <li nav-item>
-        <a class="nav-link navBrand" routerLink="/client">
-            <i class="fab fa-asymmetrik"></i>
-            AEc
-          </a>
-      </li>
-   
+    <li nav-item>
+      <a class="nav-link navBrand" routerLink="/client">
+        <i class="fab fa-asymmetrik"></i>
+        AEc
+      </a>
+    </li>
+
     <li nav-item>
       <!-- <h1 hidden>{{client.clientId}}</h1> -->
       <a
@@ -25,12 +25,20 @@
         >Complaint History</a
       >
     </li>
+    <!-- logout -->
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/"><i class="fas fa-sign-out-alt"></i></a>
+    </li>
   </ul>
 </nav>
 
-<div style="text-align: center; padding-top: 60px" class="color">
-  <h1>Your are logged in as</h1>
-  <img src="https://www.focusitinc.com/wp-content/uploads/2016/12/img_36871-242FBFE2-ADCB-0A02-16B038F723FF8A13.png" width=40% alt="">
+<div style="text-align: center; padding-top: 40px" class="color">
+  <h1>You are logged in</h1>
+  <img
+    src="https://www.focusitinc.com/wp-content/uploads/2016/12/img_36871-242FBFE2-ADCB-0A02-16B038F723FF8A13.png"
+    width="40%"
+    alt=""
+  />
   <h4>Your Id : {{ client.clientId }}</h4>
   <h4>Phone Number : {{ client.phoneNumber }}</h4>
   <h4>Address : {{ client.address }}</h4>

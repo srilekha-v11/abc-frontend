@@ -7,45 +7,49 @@ import { NgForm } from '@angular/forms';
 @Component({
   selector: 'app-register-engineer',
   templateUrl: './register-engineer.component.html',
-  styleUrls: ['./register-engineer.component.css']
+  styleUrls: ['./register-engineer.component.css'],
 })
 export class RegisterEngineerComponent implements OnInit {
-engineer:Engineer= new Engineer();
-engineerError!: Engineer;
-addForm!: NgForm ;
+  engineer: Engineer = new Engineer();
+  engineerError!: Engineer;
+  addForm!: NgForm;
 
-  constructor(private adminService:AdminService,private router:Router,private route:ActivatedRoute) { }
+  constructor(
+    private adminService: AdminService,
+    private router: Router,
+    private route: ActivatedRoute
+  ) {}
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
-  onSubmit(){
-    console.log('inside onsubmit method..')
+  onSubmit() {
+    console.log('inside onsubmit method..');
     this.saveEng(this.addForm);
-    
   }
-  saveEng(addForm: NgForm){
-    this.adminService.createEnginer(this.engineer).subscribe(data=>{
-      console.log(data);
-      alert(" Added Sucessfully!!");
-      this.navigateToLogin();},
-    error =>{
-      this.engineerError = error.error;
-      console.log(error);
-      //alert("fields are empty");
-    });
-
+  saveEng(addForm: NgForm) {
+    this.adminService.createEnginer(this.engineer).subscribe(
+      (data) => {
+        console.log(data);
+        alert(' Added Sucessfully!!');
+        this.navigateToLogin();
+      },
+      (error) => {
+        this.engineerError = error.error;
+        console.log(error);
+        //alert("fields are empty");
+      }
+    );
   }
   // saveProduct(addForm: NgForm){
   //   this.productService.addProduct(this.product).subscribe( data => {
   //     console.log(data);
   //     alert("Product Added Sucessfully!!");
-  //     this.navigateTo(this.clientId);}, 
-      
+  //     this.navigateTo(this.clientId);},
+
   //     error =>{
   //       this.productError = error.error;
   //       console.log(error);
-        
+
   //       //alert(error.message);
   //     });
   //     //alert("Product Added Sucessfully!!");
@@ -53,7 +57,7 @@ addForm!: NgForm ;
 
   // }
 
-  navigateToLogin(){
-    this.router.navigate(['/engineer/login']);  
+  navigateToLogin() {
+    this.router.navigate(['/engineer/login']);
   }
 }

@@ -3,25 +3,23 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { EngineerService } from '../view-main/services/engineer.service';
 
-
-
 @Component({
   selector: 'app-all-complaints-admin',
   templateUrl: './all-complaints-admin.component.html',
-  styleUrls: ['./all-complaints-admin.component.css']
+  styleUrls: ['./all-complaints-admin.component.css'],
 })
 export class AllComplaintsAdminComponent implements OnInit {
+  complaints: any;
 
-
-  complaints:any;
-  
-  constructor(private engineerService:EngineerService,private router:Router,private route:ActivatedRoute) {
-   }
+  constructor(
+    private engineerService: EngineerService,
+    private router: Router,
+    private route: ActivatedRoute
+  ) {}
 
   ngOnInit(): void {
-    
-    this.engineerService.allComplaintsSorted().subscribe(data=>{console.log(data) ,
-      this.complaints=data});
-
+    this.engineerService.allComplaintsSorted().subscribe((data) => {
+      console.log(data), (this.complaints = data);
+    });
   }
 }

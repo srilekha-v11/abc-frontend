@@ -1,98 +1,136 @@
-
 <!-- nav Bar routing to home : Client -->
-<nav class="navbar navbar-expand-sm " fixed-top>
+<nav class="navbar navbar-expand-sm" fixed-top>
   <ul class="navbar-nav">
+    <a class="nav-link navBrand" routerLink="/client">
+      <i class="fab fa-asymmetrik"></i>
+      AEc
+    </a>
 
-      <a class="nav-link navBrand" routerLink="/client">
-          <i class="fab fa-asymmetrik"></i> 
-          AEc
-        </a>
-
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/client/logged/product/{{clientId}}">back</a>
-        </li>
-        
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/client/logged/product/{{ clientId }}"
+        ><i class="fas fa-arrow-circle-left"></i
+      ></a>
+    </li>
   </ul>
 </nav>
+<section>
+  <div class="container">
+    <!-- Add product Code -->
 
-<!-- Add product Code -->
-<h1 class="styling">Add a Product</h1>
-<div class="col-5 align">
-    <form #addProduct="ngForm" (ngSubmit)="onSubmit()" class="styling">
-
+    <div class="col-5 align">
+      <form #addProduct="ngForm" (ngSubmit)="onSubmit()" class="styling">
         <div class="form-group">
-            <!-- <label>Product Name</label> -->
-            <label for="name">Product name<span class="required">*</span></label>
-            <input aria-describedby="required-description" type="text" class="form-control" id="productName" [(ngModel)]="product.productName" name="productName"
-            #productName="ngModel" required>
+          <label for="name">Product name<span class="required">*</span></label>
+          <input
+            aria-describedby="required-description"
+            type="text"
+            class="form-control"
+            id="productName"
+            [(ngModel)]="product.productName"
+            name="productName"
+            #productName="ngModel"
+            required
+          />
         </div>
 
         <div class="col-10" *ngIf="productError?.productName">
-            <span class="text text-danger">{{productError.productName}}</span>
-          </div><br>
+          <span class="text text-danger">{{ productError.productName }}</span>
+        </div>
+        <br />
 
         <div class="form-group">
-            <label for="name">Model Number<span class="required">*</span></label>
-            <input aria-describedby="required-description" type="text" class="form-control" id="modelNumber" [(ngModel)]="product.modelNumber" name="modelNumber" required>
+          <label for="name">Model Number<span class="required">*</span></label>
+          <input
+            aria-describedby="required-description"
+            type="text"
+            class="form-control"
+            id="modelNumber"
+            [(ngModel)]="product.modelNumber"
+            name="modelNumber"
+            required
+          />
         </div>
         <div class="col-10" *ngIf="productError?.modelNumber">
-            <span class="text text-danger">{{productError.modelNumber}}</span>
-          </div><br>
+          <span class="text text-danger">{{ productError.modelNumber }}</span>
+        </div>
+        <br />
 
         <div class="form-group cSpacing">
-            <label for="name">Category Name<span class="required">*</span></label> &nbsp; &nbsp; &nbsp;
-            <select id="categoryName" name="productCategoryName" aria-describedby="required-description" id="productCategoryName" [(ngModel)]="product.productCategoryName" required>
-            <option value="none"  disabled hidden></option>
+          <label for="name">Category Name<span class="required">*</span></label>
+          &nbsp; &nbsp; &nbsp;
+          <select
+            id="categoryName"
+            name="productCategoryName"
+            aria-describedby="required-description"
+            id="productCategoryName"
+            [(ngModel)]="product.productCategoryName"
+            required
+          >
+            <option value="none" disabled hidden></option>
             <option value="Air Conditioner">Air Conditioner</option>
             <option value="Washing Machine">Washing Machine</option>
             <option value="mobile">Mobile</option>
             <option value="Television">Television</option>
-            </select>
+          </select>
         </div>
         <div class="col-10" *ngIf="productError?.productCategoryName">
-            <span class="text text-danger">{{productError.productCategoryName}}</span>
-          </div><br>
-
-        <div class="form-group ">
-            <label for="name">Warranty Years<span class="required">*</span></label>
-            <input aria-describedby="required-description" type="number" class="form-control" id="warrantyYears" [(ngModel)]="product.warrantyYears" name="warrantyYears" required>
+          <span class="text text-danger">{{
+            productError.productCategoryName
+          }}</span>
         </div>
-        <div class="col-10" *ngIf="productError?.warrantyYears">
-            <span class="text text-danger">{{productError.warrantyYears}}</span>
-          </div><br>
+        <br />
 
         <div class="form-group">
-            <label for="name">Date of Purchase<span class="required">*</span></label>
-            <input aria-describedby="required-description" type="date" class="form-control" id="dateofPurchase" [(ngModel)]="product.dateofPurchase" name="dateofPurchase" required>
+          <label for="name"
+            >Warranty Years<span class="required">*</span></label
+          >
+          <input
+            aria-describedby="required-description"
+            type="number"
+            class="form-control"
+            id="warrantyYears"
+            [(ngModel)]="product.warrantyYears"
+            name="warrantyYears"
+            required
+          />
+        </div>
+        <div class="col-10" *ngIf="productError?.warrantyYears">
+          <span class="text text-danger">{{ productError.warrantyYears }}</span>
+        </div>
+        <br />
+
+        <div class="form-group">
+          <label for="name"
+            >Date of Purchase<span class="required">*</span></label
+          >
+          <input
+            aria-describedby="required-description"
+            type="date"
+            class="form-control"
+            id="dateofPurchase"
+            [(ngModel)]="product.dateofPurchase"
+            name="dateofPurchase"
+            required
+          />
         </div>
         <div class="col-10" *ngIf="productError?.dateofPurchase">
-            <span class="text text-danger">{{productError.dateofPurchase}}</span>
-          </div>
-
-        <br>
-        <div>
-            <button [disabled]="addProduct.invalid" class="btn btn-success" type="submit">Add Product</button>
-         <!-- <button class="btn btn-success" type="submit">Add Product</button> -->
+          <span class="text text-danger">{{
+            productError.dateofPurchase
+          }}</span>
         </div>
 
-</form>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        <br />
+        <div>
+          <button
+            [disabled]="addProduct.invalid"
+            class="btn btn-success"
+            type="submit"
+          >
+            Add Product
+          </button>
+          <!-- <button class="btn btn-success" type="submit">Add Product</button> -->
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
